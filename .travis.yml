@@ -18,8 +18,7 @@ before_script:
   - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-dist
 
 script:
-  - composer check-style
-  - composer test
+    - ./phpunit --coverage-clover=coverage.xml
 
 after_script:
   - |
