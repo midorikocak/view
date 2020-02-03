@@ -9,6 +9,8 @@ trait ViewableTrait
     public ?View $view = null;
     public string $template = '';
 
+    abstract public function toArray(): array;
+
     public function render(): string
     {
         $this->view ??= new View(new FileRenderer());
