@@ -85,7 +85,25 @@ And you can render your plain php files with variables:
 $renderer = new FileRenderer();
 $view = new View($this->renderer);
 $view->setTemplate('template.php');
-echo $this->view->render($this->postData)
+echo $this->view->render($this->postData);
+```
+This should output rendered html as this with variables rendered:
+
+```html
+<article>
+    <header>
+        <h2>Writing object oriented software is an art.</h2>
+    </header>
+    <section>
+        <h3>Introduction</h3>
+        <p>Some people say that you have to be genius, or man, but they mostly does not undertsand what is humble programming. Programming should be a modest person's craft.</p>
+        <p>Generally those people does exclude others, create clickbait articles, they make you feel less confidesnt.</p>
+        <p>Do not care about them and just try to create things. Learn. Be hungry.</p>
+    </section>
+    <footer>
+        <time datetime="1579910400">Sat, 25 2020</time>
+    </footer>
+</article>
 ```
 
 ***Note:*** Extracting variable into runtime can be unsecure.
