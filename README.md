@@ -10,6 +10,8 @@
 View is the V in MVC. A small library to include in your MVC projects. 
 Allows you to separate presentation layer from the rest of your application.
 
+**Note:** It's your responsibility to check user inputs. This library just renders templates. Nothing else.
+
 ## Install
 
 Via Composer
