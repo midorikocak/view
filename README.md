@@ -111,7 +111,7 @@ they make you feel less confident.</p>
 
 ***Note:*** Extracting variable into runtime can be unsecure.
 
-## Using Blade Template
+## Using Blade Templates
 
 To use Blade templates, use the included `BladeRennderer`.
 
