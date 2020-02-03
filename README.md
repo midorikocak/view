@@ -240,7 +240,7 @@ $templateRenderer = new TemplateRenderer();
 $view = new View($templateRenderer);
 
 $article->view = $view;
-$article->template = 'tests/View/posts/post.php';
+$article->template = 'tests/View/plain.template.html';
 
 echo $article->render();
 ```
