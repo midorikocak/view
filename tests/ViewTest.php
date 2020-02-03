@@ -10,13 +10,13 @@ class ViewTest extends TestCase
 {
     private View $view;
     private FileRenderer $renderer;
-    private array $postData;
+    private array $articleData;
     private array $layoutData;
 
     public function setUp(): void
     {
         parent::setUp();
-        $this->postData = [
+        $this->articleData = [
             'title' => 'Writing object oriented software is an art.',
             'sections' => [
                 [
@@ -54,13 +54,13 @@ class ViewTest extends TestCase
     public function testRenderTemplate()
     {
         $this->view->setTemplate('tests/View/posts/post.php');
-        $this->assertNotEmpty($this->view->render($this->postData));
+        $this->assertNotEmpty($this->view->render($this->articleData));
     }
 
     public function testRenderLayout()
     {
         $this->view->setTemplate('tests/View/posts/post.php');
-        $post = $this->view->render($this->postData);
+        $post = $this->view->render($this->articleData);
 
         $this->layoutData['main'] = $post;
 

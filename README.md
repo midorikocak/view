@@ -221,6 +221,16 @@ interface RendererInterface
 }
 ```
 
+### Rendering data objects
+
+If you have data objects that implement a `toArray()` method, you can use `ViewableTrait` with them. 
+So in your controllers you can write code like this:
+
+```php
+$article->template = 'tests/View/posts/post.php';
+echo $article->render();
+```
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
