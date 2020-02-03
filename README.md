@@ -115,7 +115,7 @@ they make you feel less confident.</p>
 
 ## Plain templates
 
-If you have plainn templates with place marks as `{{ someVariable }}`` you can use
+If you have plain templates with placemarks as `{{ someVariable }}` you can use
 `TemplateRenderer`
 
 ```html
@@ -190,7 +190,7 @@ This should output rendered html as this with variables rendered:
 
 ## Using Blade Templates
 
-To use Blade templates, use the included `BladeRennderer`.
+To use Blade templates, use the included `BladeRenderer`.
 
 ```php
 $bladeRenderer = new BladeRenderer('tests/View', '/tmp');
