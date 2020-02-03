@@ -231,6 +231,20 @@ $article->template = 'tests/View/posts/post.php';
 echo $article->render();
 ```
 
+### Custom Viewers in data objects
+
+You can change the viewer object of your data object by accessing it with the viewer that you initialized using custom renderer.
+
+```php
+$templateRenderer = new TemplateRenderer();
+$view = new View($templateRenderer);
+
+$article->view = $view;
+$article->template = 'tests/View/posts/post.php';
+
+echo $article->render();
+```
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
