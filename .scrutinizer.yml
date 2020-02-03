@@ -5,7 +5,13 @@ build:
                 override: true
             tests:
                 override: [php-scrutinizer-run]
-
+    tests:
+        override:
+            -
+                command: './vendor/bin/phpunit -c phpunit.xml --coverage-clover=coverage.clover'
+                coverage:
+                    file: 'coverage.clover'
+                    format: 'php-clover'
 filter:
     excluded_paths: [tests/*]
 
