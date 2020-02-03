@@ -25,7 +25,7 @@ $ composer require midorikocak/view
 Let's say you have blog post data like this:
 
 ```php
-$postData = [
+$articleData = [
     'title' => 'Writing object oriented software is an art.',
     'sections' => [
         [
@@ -87,7 +87,7 @@ And you can render your plain php files with variables:
 $renderer = new FileRenderer();
 $view = new View($this->renderer);
 $view->setTemplate('template.php');
-echo $this->view->render($this->postData);
+echo $this->view->render($this->articleData);
 ```
 This should output rendered html as this with variables rendered:
 
