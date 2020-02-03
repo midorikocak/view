@@ -80,4 +80,20 @@ class ViewTest extends TestCase
             ]
         ));
     }
+
+    public function testPlain()
+    {
+        $templateRenderer = new TemplateRenderer();
+        $view = new View($templateRenderer);
+        $view->setTemplate('tests/View/plain.template.html');
+        $this->assertNotEmpty($view->render(
+            [
+                'title' => 'Object Oriented Programming',
+                'sectionTitle' => 'Introduction',
+                'parapgraph' => 'Writing object oriented software is an art.',
+                'created' => '2020-01-25 00:00:00',
+                'formatted' => 'Mon 25, 2020',
+            ]
+        ));
+    }
 }

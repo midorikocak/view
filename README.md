@@ -113,6 +113,81 @@ they make you feel less confident.</p>
 
 ***Note:*** Extracting variable into runtime can be unsecure.
 
+## Plain templates
+
+If you have plainn templates with place marks as `{{ someVariable }}`` you can use
+`TemplateRenderer`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<article>
+    <header>
+        <h2>{{ title }}</h2>
+    </header>
+    <section>
+        <h3>{{ sectionTitle }}</h3>
+        <p>{{ paragraph }}</p>
+    </section>
+    <footer>
+        <time datetime="{{ created }}">
+            {{ formatted }}
+        </time>
+    </footer>
+</article>
+</body>
+</html>
+```
+
+To render this template using some data:
+
+```php
+$templateRenderer = new TemplateRenderer();
+$view = new View($templateRenderer);
+$view->setTemplate('tests/View/plain.template.html');
+$this->assertNotEmpty($view->render(
+    [
+        'title' => 'Object Oriented Programming',
+        'sectionTitle' => 'Introduction',
+        'parapgraph' => 'Writing object oriented software is an art.',
+        'created' => '2020-01-25 00:00:00',
+        'formatted' => 'Mon 25, 2020',
+    ]
+));
+```
+This should output rendered html as this with variables rendered:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Oriented Programming</title>
+</head>
+<body>
+<article>
+    <header>
+        <h2>Object Oriented Programming</h2>
+    </header>
+    <section>
+        <h3>Introduction</h3>
+        <p></p>
+    </section>
+    <footer>
+        <time datetime="2020-01-25 00:00:00">
+            Mon 25, 2020
+        </time>
+    </footer>
+</article>
+</body>
+</html>
+```
+
 ## Using Blade Templates
 
 To use Blade templates, use the included `BladeRennderer`.

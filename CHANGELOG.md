@@ -6,16 +6,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.0] - 2020-01-23
+## [1.0.1] - 2020-02-03
 
 ### Added
-- Nothing
+- BladeRenderer
+- FileRenderer
+- RendererInterface
+- View
 
 ### Deprecated
 - Nothing
 
 ### Fixed
 - Nothing
+
+### Removed
+- Nothing
+
+### Security
+- Nothing
+
+## [1.0.2] - 2020-02-03
+
+### Added
+- TemplateRenderer
+
+### Deprecated
+- Nothing
+
+### Fixed
+- Readme
 
 ### Removed
 - Nothing
