@@ -51,13 +51,13 @@ class ViewTest extends TestCase
         unset($this->view, $this->renderer, $this->articleData, $this->layoutData);
     }
 
-    public function testRenderTemplate()
+    public function testRenderTemplate(): void
     {
         $this->view->setTemplate('tests/View/posts/post.php');
         $this->assertNotEmpty($this->view->render($this->articleData));
     }
 
-    public function testRenderLayout()
+    public function testRenderLayout(): void
     {
         $this->view->setTemplate('tests/View/posts/post.php');
         $post = $this->view->render($this->articleData);
@@ -68,7 +68,7 @@ class ViewTest extends TestCase
         $this->assertNotEmpty($this->view->render($this->layoutData));
     }
 
-    public function testBlade()
+    public function testBlade(): void
     {
         $bladeRenderer = new BladeRenderer('tests/View', '/tmp');
         $view = new View($bladeRenderer);
@@ -81,7 +81,7 @@ class ViewTest extends TestCase
         ));
     }
 
-    public function testPlain()
+    public function testPlain(): void
     {
         $templateRenderer = new TemplateRenderer();
         $view = new View($templateRenderer);

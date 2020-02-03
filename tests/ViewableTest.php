@@ -53,7 +53,7 @@ class ViewableTest extends TestCase
         unset($this->articleData);
     }
 
-    public function testRenderArticle()
+    public function testRenderArticle(): void
     {
         $this->article->template = 'tests/View/posts/post.php';
         $this->assertNotEmpty($this->article->render());
