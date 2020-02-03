@@ -27,9 +27,7 @@ class TemplateRenderer implements RendererInterface
         }, $templateVars[1]));
 
         $tokenized = preg_replace('/{{ *([a-zA-Z_0-9-]*)? *}}/', '{{$1}}', $templateContents);
-
-        $varLength = count($templateVars);
-
+        
         foreach ($templateVarNames as $toReplace) {
             $tokenized = str_replace('{{' . $toReplace . '}}', $data[$toReplace] ?? '', $tokenized);
         }
