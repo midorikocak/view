@@ -17,11 +17,11 @@
         }
     ],
     "require": {
-        "php" : "~7.4",
-        "ext-json": "*"
+        "php": "~7.4",
+        "ext-json": "*",
+        "eftec/bladeone": "^3.34"
     },
     "require-dev": {
-        "eftec/bladeone": "^3.34",
         "guzzlehttp/guzzle": "^6.5",
         "opsway/psr12-strict-coding-standard": "^0.3.0",
         "phpunit/phpunit": ">=8.0",
