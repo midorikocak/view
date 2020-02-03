@@ -49,7 +49,8 @@ class ViewableTest extends TestCase
     public function tearDown(): void
     {
         parent::tearDown();
-        unset($this->api);
+        unset($this->article);
+        unset($this->articleData);
     }
 
     public function testRenderArticle()

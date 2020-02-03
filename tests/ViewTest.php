@@ -48,7 +48,7 @@ class ViewTest extends TestCase
     public function tearDown(): void
     {
         parent::tearDown();
-        unset($this->api);
+        unset($this->view, $this->renderer, $this->articleData, $this->layoutData);
     }
 
     public function testRenderTemplate()
