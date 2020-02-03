@@ -33,7 +33,7 @@ $postData = [
         but they mostly does not undertsand what is humble programming.
         Programming should be a modest person\'s craft.',
                 'Generally those people does exclude others, create clickbait articles,
-            they make you feel less confidesnt.',
+            they make you feel less confident.',
                 'Do not care about them and just try to create things. Learn. Be hungry.',
             ],
         ],
@@ -96,8 +96,11 @@ This should output rendered html as this with variables rendered:
     </header>
     <section>
         <h3>Introduction</h3>
-        <p>Some people say that you have to be genius, or man, but they mostly does not undertsand what is humble programming. Programming should be a modest person's craft.</p>
-        <p>Generally those people does exclude others, create clickbait articles, they make you feel less confidesnt.</p>
+        <p>Some people say that you have to be genius, or man, 
+but they mostly does not undertsand what is humble programming. 
+Programming should be a modest person's craft.</p>
+        <p>Generally those people does exclude others, create clickbait articles, 
+they make you feel less confident.</p>
         <p>Do not care about them and just try to create things. Learn. Be hungry.</p>
     </section>
     <footer>
