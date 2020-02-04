@@ -16,9 +16,11 @@ class FileRenderer implements RendererInterface
 {
     public function render(string $filename, array $data): string
     {
-        ob_start();
-        extract($data, EXTR_OVERWRITE);
-        include $filename;
-        return ob_get_clean();
+        return (function () use ($filename, $data) {
+            ob_start();
+            extract($data, EXTR_OVERWRITE);
+            include $filename;
+            return ob_get_clean();
+        })();
     }
 }
