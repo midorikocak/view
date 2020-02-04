@@ -43,3 +43,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 - Nothing
+
+## [1.0.4] - 2020-02-04
+
+### Added
+- Nothing
+
+### Deprecated
+- Nothing
+
+### Fixed
+- Global include
+
+### Removed
+- Nothing
+
+### Security
+- Nothing
