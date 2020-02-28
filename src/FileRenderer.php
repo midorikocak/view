@@ -14,7 +14,7 @@ use const EXTR_OVERWRITE;
 
 class FileRenderer implements RendererInterface
 {
-    public function render(string $filename, array $data): string
+    public function render(string $filename, array $data = []): string
     {
         return (function () use ($filename, $data) {
             ob_start();

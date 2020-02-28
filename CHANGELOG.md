@@ -60,3 +60,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 - Nothing
+
+## [1.0.5] - 2020-02-28
+
+### Added
+- HTML Renderer
+
+### Deprecated
+- Nothing
+
+### Fixed
+- Data parameter made optional in render methods
+
+### Removed
+- Nothing
+
+### Security
+- Nothing

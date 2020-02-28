@@ -17,7 +17,7 @@ class BladeRenderer implements RendererInterface
         }
     }
 
-    public function render(string $filename, array $data): string
+    public function render(string $filename, array $data = []): string
     {
         return $this->renderer->run($filename, $data);
     }

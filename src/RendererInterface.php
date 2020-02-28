@@ -6,5 +6,5 @@ namespace midorikocak\view;
 
 interface RendererInterface
 {
-    public function render(string $template, array $data): string;
+    public function render(string $template, array $data = []): string;
 }
